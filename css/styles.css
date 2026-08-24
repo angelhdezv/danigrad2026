@@ -2386,6 +2386,30 @@ main {
 }
 
 @media (max-width: 47.999rem) {
+    .display-title--countdown {
+        font-size: clamp(3.2rem, 16vw, 6rem);
+    }
+
+    .display-title--dress {
+        font-size: clamp(4.7rem, 24vw, 7.5rem);
+    }
+
+    .display-title--gifts {
+        font-size: clamp(3.5rem, 18vw, 6.5rem);
+    }
+
+    .display-title--location {
+        font-size: clamp(3.8rem, 19vw, 7rem);
+    }
+
+    .display-title--rsvp {
+        font-size: clamp(2.75rem, 14.4vw, 5.5rem);
+    }
+
+    .display-title--rsvp span:last-child {
+        letter-spacing: -0.07em;
+    }
+
     .rsvp-art {
         inset-inline-start: clamp(-8rem, -22vw, -4rem);
         inset-block-end: -0.35rem;
