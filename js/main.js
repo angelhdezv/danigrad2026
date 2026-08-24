@@ -8,6 +8,7 @@
  * - RSVP link generation
  * - music playback controls
  * - autoplay attempt
+ * - event countdown
  * - gift carousel navigation
  * - current year
  */
@@ -18,6 +19,11 @@
 ========================================================== */
 
 const config = {
+    /**
+     * Niagara Falls is on Eastern Daylight Time on the event date.
+     */
+    eventDate: '2026-10-31T14:00:00-04:00',
+
     /**
      * Mexican WhatsApp number.
      *
@@ -30,10 +36,10 @@ const config = {
     rsvpWhatsAppNumber: '527721335445',
 
     rsvpMessage: [
-        'Hola Daniela 🎓',
+        'Hola Daniela,',
         '',
         'Confirmo mi asistencia a tu graduación',
-        'el 31 de octubre de 2026. 🎉',
+        'el 31 de octubre de 2026.',
     ].join('\n'),
 };
 
@@ -53,6 +59,24 @@ const elements = {
             '#music-toggle .music-player__icon',
         ),
 
+    countdown:
+        document.querySelector('[data-countdown]'),
+
+    countdownDays:
+        document.querySelector('[data-countdown-days]'),
+
+    countdownHours:
+        document.querySelector('[data-countdown-hours]'),
+
+    countdownMinutes:
+        document.querySelector('[data-countdown-minutes]'),
+
+    countdownSeconds:
+        document.querySelector('[data-countdown-seconds]'),
+
+    countdownStatus:
+        document.querySelector('[data-countdown-status]'),
+
     giftTrack:
         document.querySelector('[data-gift-track]'),
 
@@ -71,6 +95,116 @@ const elements = {
 
     currentYear:
         document.querySelector('[data-current-year]'),
+};
+
+
+/* ==========================================================
+   COUNTDOWN
+========================================================== */
+
+const updateCountdown = () => {
+    if (
+        !elements.countdown ||
+        !elements.countdownDays ||
+        !elements.countdownHours ||
+        !elements.countdownMinutes ||
+        !elements.countdownSeconds
+    ) {
+        return 0;
+    }
+
+    const eventTime =
+        new Date(config.eventDate).getTime();
+
+    const remainingMilliseconds =
+        Math.max(eventTime - Date.now(), 0);
+
+    const totalSeconds =
+        Math.floor(remainingMilliseconds / 1000);
+
+    const days =
+        Math.floor(totalSeconds / 86400);
+
+    const hours =
+        Math.floor((totalSeconds % 86400) / 3600);
+
+    const minutes =
+        Math.floor((totalSeconds % 3600) / 60);
+
+    const seconds =
+        totalSeconds % 60;
+
+    elements.countdownDays.textContent =
+        String(days).padStart(3, '0');
+
+    elements.countdownHours.textContent =
+        String(hours).padStart(2, '0');
+
+    elements.countdownMinutes.textContent =
+        String(minutes).padStart(2, '0');
+
+    elements.countdownSeconds.textContent =
+        String(seconds).padStart(2, '0');
+
+    const isComplete =
+        remainingMilliseconds === 0;
+
+    elements.countdown.classList.toggle(
+        'is-complete',
+        isComplete,
+    );
+
+    if (elements.countdownStatus) {
+        const statusKey =
+            `${days}-${hours}-${minutes}-${isComplete}`;
+
+        if (
+            elements.countdownStatus.dataset.statusKey !==
+            statusKey
+        ) {
+            elements.countdownStatus.dataset.statusKey =
+                statusKey;
+
+            elements.countdownStatus.textContent =
+                isComplete
+                    ? 'La celebración ya comenzó.'
+                    : `Faltan ${days} días, ${hours} horas y ${minutes} minutos para la graduación.`;
+        }
+    }
+
+    return remainingMilliseconds;
+};
+
+
+const configureCountdown = () => {
+    if (!elements.countdown) {
+        return;
+    }
+
+    const remainingMilliseconds =
+        updateCountdown();
+
+    if (remainingMilliseconds === 0) {
+        return;
+    }
+
+    const timer = window.setInterval(
+        () => {
+            if (updateCountdown() === 0) {
+                window.clearInterval(timer);
+            }
+        },
+        1000,
+    );
+
+    document.addEventListener(
+        'visibilitychange',
+        () => {
+            if (!document.hidden) {
+                updateCountdown();
+            }
+        },
+    );
 };
 
 
@@ -342,10 +476,64 @@ const updateCurrentYear = () => {
 
 
 /* ==========================================================
+   EDITORIAL REVEALS
+========================================================== */
+
+const configureReveals = () => {
+    const revealItems =
+        document.querySelectorAll('[data-reveal]');
+
+    if (!revealItems.length) {
+        return;
+    }
+
+    document.documentElement.classList.add(
+        'reveal-ready',
+    );
+
+    if (!('IntersectionObserver' in window)) {
+        revealItems.forEach((item) => {
+            item.classList.add('is-visible');
+        });
+
+        return;
+    }
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                entry.target.classList.add(
+                    'is-visible',
+                );
+
+                observer.unobserve(entry.target);
+            });
+        },
+        {
+            threshold: 0.12,
+            rootMargin: '0px 0px -8% 0px',
+        },
+    );
+
+    revealItems.forEach((item) => {
+        observer.observe(item);
+    });
+};
+
+
+/* ==========================================================
    APP
 ========================================================== */
 
 const init = () => {
+    configureReveals();
+
+    configureCountdown();
+
     configureRSVP();
 
     configureGiftCarousel();
