@@ -3,540 +3,226 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Graduación Daniela Leon | Class of 2026</title>
-
     <meta name="description"
         content="Acompaña a Daniela Leon a celebrar su graduación el 31 de octubre de 2026 en Niagara Falls Convention Centre.">
-
     <meta name="theme-color" content="#f4efe5">
-
     <meta name="author" content="Cáele.mx">
-
     <meta name="robots" content="noindex, nofollow">
-
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-
     <link rel="stylesheet" href="./css/styles.css">
-
     <script type="module" src="./js/main.js"></script>
 </head>
 
-
 <body>
-
     <div class="invitation">
-
-
-        <!-- =====================================================
-         MUSIC PLAYER
-    ====================================================== -->
-
         <audio id="background-music" loop preload="auto">
             <source src="./assets/audio/en-marcha-estoy.mp3" type="audio/mpeg">
         </audio>
 
-
         <button id="music-toggle" class="music-player" type="button" aria-label="Reproducir música"
             aria-pressed="false">
-
-            <span class="music-player__icon" aria-hidden="true">
-                ▶
-            </span>
-
+            <span class="music-player__icon" aria-hidden="true">▶</span>
             <span class="music-player__content">
-
-                <span class="music-player__title">
-                    En marcha estoy
-                </span>
-
-                <span class="music-player__artist">
-                    Phil Collins
-                </span>
-
+                <span class="music-player__title">En marcha estoy</span>
+                <span class="music-player__artist">Phil Collins</span>
             </span>
-
         </button>
 
-
-
-        <!-- =====================================================
-         HERO / COVER
-    ====================================================== -->
-
         <header class="cover">
-
             <div class="cover__inner">
-
-
-                <!-- CLASS -->
-
-                <p class="cover__eyebrow">
-                    Class of 2026
-                </p>
-
-
-                <!-- GRADUATE -->
-
-                <h1 class="cover__headline">
-                    Graduate
-                </h1>
-
-
-                <!-- NAME -->
-
-                <div class="cover__name">
-                    Daniela Leon
-                </div>
-
-
-                <!-- CONTENT -->
+                <p class="cover__eyebrow">Class of 2026</p>
+                <h1 class="cover__headline">Graduate</h1>
+                <div class="cover__name">Daniela Leon</div>
 
                 <div class="cover__composition">
-
-
-                    <!-- EVENT INFORMATION -->
-
                     <div class="cover__details">
-
-
                         <div class="cover__intro">
-
                             <span class="decorative-line" aria-hidden="true"></span>
-
-                            <p>
-                                Join us for a
-                                <strong>
-                                    graduation party
-                                </strong>
-                            </p>
-
+                            <p>Join us for a <strong>graduation party</strong></p>
                         </div>
 
-
                         <div class="event-detail">
-
                             <svg class="event-detail__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                                 <rect x="3" y="5" width="18" height="16" rx="2" />
-
-                                <path d="M7 3v4" />
-                                <path d="M17 3v4" />
-                                <path d="M3 9h18" />
+                                <path d="M7 3v4M17 3v4M3 9h18" />
                             </svg>
-
                             <div>
-
-                                <p class="event-detail__primary">
-                                    31 de octubre de 2026
-                                </p>
-
-                                <p class="event-detail__secondary">
-                                    2:00 PM
-                                </p>
-
+                                <p class="event-detail__primary">31 de octubre de 2026</p>
+                                <p class="event-detail__secondary">2:00 PM</p>
                             </div>
-
                         </div>
-
 
                         <div class="event-detail">
-
                             <svg class="event-detail__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path d="
-                                    M20 10
-                                    c0 5-8 11-8 11
-                                    S4 15 4 10
-                                    a8 8 0 1 1 16 0z
-                                " />
-
+                                <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z" />
                                 <circle cx="12" cy="10" r="2.5" />
                             </svg>
-
                             <div>
-
-                                <p class="event-detail__primary">
-                                    Niagara Falls Convention Centre
-                                </p>
-
-                                <a class="event-detail__link" href="https://maps.app.goo.gl/X4abVVeZd3RWrRCF6?g_st=ac"
-                                    target="_blank" rel="noopener noreferrer">
-                                    Ver ubicación
-                                </a>
-
+                                <p class="event-detail__primary">Niagara Falls Convention Centre</p>
+                                <a class="event-detail__link"
+                                    href="https://maps.app.goo.gl/X4abVVeZd3RWrRCF6?g_st=ac" target="_blank"
+                                    rel="noopener noreferrer">Ver ubicación</a>
                             </div>
-
                         </div>
-
                     </div>
 
-
-                    <!-- DANIELA -->
-
                     <div class="cover__portrait">
-
                         <img src="./assets/images/daniela-sketch.png"
                             alt="Ilustración de Daniela Leon con toga y birrete de graduación" width="1024"
                             height="1536" fetchpriority="high" decoding="async">
-
                     </div>
-
                 </div>
 
-
-                <!-- SCROLL CTA -->
-
                 <a class="scroll-hint" href="#details" aria-label="Descubrir más detalles de la invitación">
-
                     <svg class="scroll-hint__heart" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <path d="
-                            M12 21
-                            S3 15.5 3 9.5
-                            C3 6 7.5 4.5 12 9
-                            C16.5 4.5 21 6 21 9.5
-                            C21 15.5 12 21 12 21z
-                        " />
+                        <path d="M12 21S3 15.5 3 9.5C3 6 7.5 4.5 12 9C16.5 4.5 21 6 21 9.5C21 15.5 12 21 12 21z" />
                     </svg>
-
-                    <span>
-                        Desliza para descubrir
-                    </span>
-
+                    <span>Desliza para descubrir</span>
                     <svg class="scroll-hint__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                         <path d="M6 9l6 6 6-6" />
                     </svg>
-
                 </a>
-
             </div>
-
         </header>
 
-
-
-        <!-- =====================================================
-         DETAILS
-    ====================================================== -->
-
         <main id="details">
-
-
-            <!-- =================================================
-             DRESS CODE
-        ================================================== -->
-
-            <section class="section section--dress">
-
-                <div class="section-container">
-
-                    <p class="section__eyebrow">
-                        Dress code
-                    </p>
-
-                    <h2 class="section__title">
-                        Formal
-                    </h2>
-
-                    <p class="section__copy">
-                        Ven listo para celebrar este momento
-                        tan especial junto a Daniela.
-                    </p>
-
-                    <div class="dress-illustration" aria-hidden="true">
-
-                        <svg viewBox="0 0 120 100" fill="none">
-
-                            <path d="
-                                M44 16
-                                L32 26
-                                L40 48
-                                L30 88
-                                H58
-                                L52 48
-                                L60 28
-                                Z
-                            " />
-
-                            <path d="
-                                M76 18
-                                L66 28
-                                L72 50
-                                L68 88
-                                H96
-                                L90 50
-                                L96 28
-                                Z
-                            " />
-
-                        </svg>
-
+            <section class="editorial-section editorial-section--dress" aria-labelledby="dress-title">
+                <div class="editorial-shell dress-layout">
+                    <div class="editorial-heading" data-reveal>
+                        <p class="editorial-kicker">Dress code</p>
+                        <span class="gold-rule" aria-hidden="true"></span>
+                        <h2 id="dress-title" class="display-title display-title--dress">Formal</h2>
                     </div>
 
-                </div>
+                    <div class="editorial-copy-block" data-reveal>
+                        <span class="ink-rule" aria-hidden="true"></span>
+                        <p>Ven listo para celebrar este momento tan especial junto a Daniela.</p>
+                        <span class="gold-drop" aria-hidden="true"></span>
+                    </div>
 
+                    <img class="dress-art" src="./assets/illustrations/dress-formal.webp" alt="" width="1143"
+                        height="1200" loading="lazy" decoding="async" data-reveal>
+                </div>
             </section>
 
+            <section class="editorial-section editorial-section--gifts" aria-labelledby="gifts-title">
+                <div class="editorial-shell gifts-layout">
+                    <div class="gifts-heading" data-reveal>
+                        <p class="editorial-kicker">Mesa de regalos</p>
+                        <h2 id="gifts-title" class="display-title display-title--gifts">
+                            <span>Un</span><span>pequeño</span><span>detalle</span>
+                        </h2>
+                        <span class="gold-rule gold-rule--wide" aria-hidden="true"></span>
+                        <p class="gifts-intro">Si deseas consentir a Daniela, aquí tienes algunas ideas muy serias.</p>
+                    </div>
 
-
-            <!-- =================================================
-             GIFTS
-        ================================================== -->
-
-            <section class="section section--gifts">
-
-                <div class="section-container">
-
-                    <p class="section__eyebrow">
-                        Mesa de regalos
-                    </p>
-
-                    <h2 class="section__title">
-                        Un pequeño detalle
-                    </h2>
-
-                    <p class="section__copy">
-                        Si deseas consentir a Daniela,
-                        aquí tienes algunas ideas muy serias.
-                    </p>
-
-
-                    <div class="gift-carousel">
-
-
+                    <div class="gift-carousel" data-reveal>
                         <button class="carousel-button carousel-button--previous" type="button"
-                            aria-label="Ver regalo anterior" data-carousel-previous>
-                            ←
-                        </button>
-
+                            aria-label="Ver regalo anterior" data-carousel-previous>←</button>
 
                         <div class="gift-track" data-gift-track tabindex="0" aria-label="Lista de ideas de regalos">
-
-
-                            <article class="gift-card">
+                            <article class="gift-card gift-card--illustrated">
                                 <span class="gift-card__number">01</span>
+                                <img class="gift-card__art" src="./assets/illustrations/gift-nopales.webp" alt=""
+                                    width="846" height="900" loading="lazy" decoding="async">
+                                <span class="gift-card__line" aria-hidden="true"></span>
                                 <h3>Nopales</h3>
                             </article>
-
-
-                            <article class="gift-card">
+                            <article class="gift-card gift-card--illustrated">
                                 <span class="gift-card__number">02</span>
+                                <img class="gift-card__art gift-card__art--wide"
+                                    src="./assets/illustrations/gift-tortillas.webp" alt="" width="900" height="600"
+                                    loading="lazy" decoding="async">
+                                <span class="gift-card__line" aria-hidden="true"></span>
                                 <h3>Tortillas</h3>
                             </article>
-
-
-                            <article class="gift-card">
-                                <span class="gift-card__number">03</span>
-                                <h3>Queso Oaxaca</h3>
-                            </article>
-
-
-                            <article class="gift-card">
-                                <span class="gift-card__number">04</span>
-                                <h3>Longaniza</h3>
-                            </article>
-
-
-                            <article class="gift-card">
-                                <span class="gift-card__number">05</span>
-                                <h3>Un Gansito</h3>
-                            </article>
-
-
-                            <article class="gift-card">
-                                <span class="gift-card__number">06</span>
-                                <h3>Alegrías</h3>
-                            </article>
-
-
-                            <article class="gift-card">
-                                <span class="gift-card__number">07</span>
-                                <h3>Dinero</h3>
-                            </article>
-
-
-                            <article class="gift-card">
-                                <span class="gift-card__number">08</span>
-                                <h3>Una Kindle</h3>
-                            </article>
-
-
-                            <article class="gift-card">
-                                <span class="gift-card__number">09</span>
-                                <h3>
-                                    Unos Crocs pa' ir elegante
-                                    a la graduación
-                                </h3>
-                            </article>
-
-
-                            <article class="gift-card">
-                                <span class="gift-card__number">10</span>
-                                <h3>Más nopales</h3>
-                            </article>
-
-
-                            <article class="gift-card">
-                                <span class="gift-card__number">11</span>
-                                <h3>Más tortillas</h3>
-                            </article>
-
+                            <article class="gift-card"><span class="gift-card__number">03</span><span class="gift-card__monogram">Q</span><span class="gift-card__line" aria-hidden="true"></span><h3>Queso Oaxaca</h3></article>
+                            <article class="gift-card"><span class="gift-card__number">04</span><span class="gift-card__monogram">L</span><span class="gift-card__line" aria-hidden="true"></span><h3>Longaniza</h3></article>
+                            <article class="gift-card"><span class="gift-card__number">05</span><span class="gift-card__monogram">G</span><span class="gift-card__line" aria-hidden="true"></span><h3>Un Gansito</h3></article>
+                            <article class="gift-card"><span class="gift-card__number">06</span><span class="gift-card__monogram">A</span><span class="gift-card__line" aria-hidden="true"></span><h3>Alegrías</h3></article>
+                            <article class="gift-card"><span class="gift-card__number">07</span><span class="gift-card__monogram">$</span><span class="gift-card__line" aria-hidden="true"></span><h3>Dinero</h3></article>
+                            <article class="gift-card"><span class="gift-card__number">08</span><span class="gift-card__monogram">K</span><span class="gift-card__line" aria-hidden="true"></span><h3>Una Kindle</h3></article>
+                            <article class="gift-card"><span class="gift-card__number">09</span><span class="gift-card__monogram">C</span><span class="gift-card__line" aria-hidden="true"></span><h3>Unos Crocs pa' ir elegante a la graduación</h3></article>
+                            <article class="gift-card"><span class="gift-card__number">10</span><span class="gift-card__monogram">N</span><span class="gift-card__line" aria-hidden="true"></span><h3>Más nopales</h3></article>
+                            <article class="gift-card"><span class="gift-card__number">11</span><span class="gift-card__monogram">T</span><span class="gift-card__line" aria-hidden="true"></span><h3>Más tortillas</h3></article>
                         </div>
 
-
                         <button class="carousel-button carousel-button--next" type="button"
-                            aria-label="Ver siguiente regalo" data-carousel-next>
-                            →
-                        </button>
+                            aria-label="Ver siguiente regalo" data-carousel-next>→</button>
+                    </div>
+                    <p class="carousel-hint" aria-hidden="true"><span></span>desliza<span></span></p>
+                </div>
+            </section>
 
+            <section class="editorial-section editorial-section--location" aria-labelledby="location-title">
+                <div class="editorial-shell location-layout">
+                    <div class="location-heading" data-reveal>
+                        <p class="editorial-kicker">Nos vemos en</p>
+                        <span class="location-ornament" aria-hidden="true"></span>
+                        <h2 id="location-title" class="display-title display-title--location">
+                            <span>Niagara</span><span>Falls</span>
+                        </h2>
                     </div>
 
+                    <img class="location-art" src="./assets/illustrations/niagara-location.webp"
+                        alt="Ilustración de las Cataratas del Niágara y el Niagara Falls Convention Centre"
+                        width="1400" height="933" loading="lazy" decoding="async" data-reveal>
 
-                    <p class="carousel-hint" aria-hidden="true">
-                        ← desliza →
-                    </p>
-
+                    <div class="location-actions" data-reveal>
+                        <span class="ink-rule ink-rule--short" aria-hidden="true"></span>
+                        <p>Niagara Falls<br>Convention Centre</p>
+                        <span class="gold-rule" aria-hidden="true"></span>
+                        <a class="outline-button" href="https://maps.app.goo.gl/X4abVVeZd3RWrRCF6?g_st=ac"
+                            target="_blank" rel="noopener noreferrer">
+                            <span>Abrir ubicación</span><span aria-hidden="true">→</span>
+                        </a>
+                    </div>
                 </div>
-
             </section>
 
+            <section class="editorial-section editorial-section--rsvp" aria-labelledby="rsvp-title">
+                <div class="editorial-shell rsvp-layout">
+                    <div class="rsvp-heading" data-reveal>
+                        <p class="editorial-kicker">RSVP</p>
+                        <div class="rsvp-accent" aria-hidden="true"><span></span><span>♥</span></div>
+                        <h2 id="rsvp-title" class="display-title display-title--rsvp">
+                            <span>¿Nos</span><span>acompañas?</span>
+                        </h2>
+                    </div>
 
+                    <div class="rsvp-copy" data-reveal>
+                        <p>Confirma tu asistencia para que Daniela pueda preparar todo para celebrar contigo.</p>
+                        <a id="rsvp-link" class="rsvp-button" href="#" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z" />
+                                <path d="M9 8c.5 4 3 6.5 7 7" />
+                            </svg>
+                            <span>Confirmar por WhatsApp</span>
+                        </a>
+                    </div>
 
-            <!-- =================================================
-             LOCATION
-        ================================================== -->
-
-            <section class="section section--location">
-
-                <div class="section-container">
-
-                    <p class="section__eyebrow">
-                        Nos vemos en
-                    </p>
-
-                    <h2 class="section__title">
-                        Niagara Falls
-                    </h2>
-
-                    <p class="location__venue">
-                        Niagara Falls Convention Centre
-                    </p>
-
-
-                    <svg class="location__pin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <path d="
-                            M20 10
-                            c0 5-8 11-8 11
-                            S4 15 4 10
-                            a8 8 0 1 1 16 0z
-                        " />
-
-                        <circle cx="12" cy="10" r="2.5" />
-                    </svg>
-
-
-                    <a class="outline-button" href="https://maps.app.goo.gl/X4abVVeZd3RWrRCF6?g_st=ac" target="_blank"
-                        rel="noopener noreferrer">
-                        Abrir ubicación
-                    </a>
-
+                    <img class="rsvp-art" src="./assets/illustrations/rsvp-envelope.webp" alt="" width="1000"
+                        height="667" loading="lazy" decoding="async" data-reveal>
                 </div>
-
             </section>
-
-
-
-            <!-- =================================================
-             RSVP
-        ================================================== -->
-
-            <section class="section section--rsvp">
-
-                <div class="section-container">
-
-                    <p class="section__eyebrow">
-                        RSVP
-                    </p>
-
-                    <h2 class="section__title">
-                        ¿Nos acompañas?
-                    </h2>
-
-                    <p class="section__copy">
-                        Confirma tu asistencia para que Daniela
-                        pueda preparar todo para celebrar contigo.
-                    </p>
-
-
-                    <a id="rsvp-link" class="rsvp-button" href="#" target="_blank" rel="noopener noreferrer">
-
-                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="
-                                M12 3
-                                a9 9 0 0 0-7.8 13.5
-                                L3 21
-                                l4.7-1.2
-                                A9 9 0 1 0 12 3z
-                            " />
-
-                            <path d="M9 8c.5 4 3 6.5 7 7" />
-                        </svg>
-
-                        <span>
-                            Confirmar por WhatsApp
-                        </span>
-
-                    </a>
-
-                </div>
-
-            </section>
-
         </main>
 
-
-
-        <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-        <footer class="footer">
-
-            <div class="footer__inner">
-
-                <p class="footer__developed">
-                    Developed by
-                </p>
-
-
+        <footer class="footer footer--editorial">
+            <div class="footer__inner" data-reveal>
+                <p class="footer__developed">Developed by</p>
+                <span class="gold-rule" aria-hidden="true"></span>
                 <a class="footer__brand" href="https://caele.mx" target="_blank" rel="noopener noreferrer"
                     aria-label="Visitar Cáele.mx">
-
                     <img src="./assets/branding/caele-logo.svg" alt="Cáele.mx">
-
                 </a>
-
-
-                <p class="footer__tagline">
-                    Invitaciones digitales
-                    para momentos especiales.
-                </p>
-
-
-                <p class="footer__copyright">
-                    ©
-                    <span data-current-year>
-                        2026
-                    </span>
-                    Cáele.mx
-                </p>
-
+                <p class="footer__tagline">Invitaciones digitales para momentos especiales.</p>
+                <p class="footer__copyright">© <span data-current-year>2026</span> Cáele.mx</p>
             </div>
-
         </footer>
-
     </div>
-
 </body>
 
 </html>
