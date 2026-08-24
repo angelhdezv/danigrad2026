@@ -30,10 +30,10 @@ const config = {
     rsvpWhatsAppNumber: '527721335445',
 
     rsvpMessage: [
-        'Hola Daniela 🎓',
+        'Hola Daniela,',
         '',
         'Confirmo mi asistencia a tu graduación',
-        'el 31 de octubre de 2026. 🎉',
+        'el 31 de octubre de 2026.',
     ].join('\n'),
 };
 

@@ -2226,8 +2226,17 @@ main {
     inset-block-end: clamp(-1.5rem, -2svh, 0rem);
     inline-size: clamp(35rem, 125vw, 64rem);
     max-inline-size: none;
+    filter: contrast(1.16);
     pointer-events: none;
     user-select: none;
+}
+
+@media (max-width: 47.999rem) {
+    .rsvp-art {
+        inset-inline-start: clamp(-8rem, -22vw, -4rem);
+        inset-block-end: -0.35rem;
+        inline-size: clamp(34rem, 138vw, 44rem);
+    }
 }
 
 
