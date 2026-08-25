@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ana Emi | Daniela se gradúa</title>
+    <meta name="description"
+        content="Una invitación especial para Ana Emi: acompaña a Daniela a celebrar su graduación en Niagara Falls.">
+    <meta name="theme-color" content="#f8eedc">
+    <meta name="author" content="Cáele.mx">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/svg+xml" href="./assets/branding/caele-favicon-kids.svg">
+    <link rel="stylesheet" href="./css/styles.css?v=0.0.3-rsvp-ratio">
+    <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+    <audio id="background-music" loop preload="auto">
+        <source src="../assets/audio/en-marcha-estoy.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="music-toggle" class="music-player" type="button" aria-label="Reproducir música"
+        aria-pressed="false">
+        <span class="music-player__icon" aria-hidden="true">▶</span>
+        <span class="music-player__copy">
+            <strong>En marcha estoy</strong>
+            <span>Phil Collins</span>
+        </span>
+    </button>
+
+    <div class="invitation">
+        <header class="hero" id="inicio">
+            <div class="sprinkles" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="page-shell hero__inner">
+                <p class="felt-label" data-reveal>Una invitación para</p>
+
+                <h1 class="hero__name" aria-label="Ana Emi" data-reveal>
+                    <span class="hero__name-row">
+                        <span class="felt-letter felt-letter--coral">A</span>
+                        <span class="felt-letter felt-letter--turquoise">N</span>
+                        <span class="felt-letter felt-letter--lavender">A</span>
+                    </span>
+                    <span class="hero__name-row">
+                        <span class="felt-letter felt-letter--turquoise">E</span>
+                        <span class="felt-letter felt-letter--yellow">M</span>
+                        <span class="felt-letter felt-letter--coral">I</span>
+                        <span class="felt-heart" aria-hidden="true">♥</span>
+                    </span>
+                </h1>
+
+                <p class="dark-label hero__event" data-reveal>Daniela se gradúa</p>
+
+                <div class="hero__details" data-reveal>
+                    <div class="hero__date">
+                        <strong>31</strong>
+                        <span>Oct<br>2026</span>
+                    </div>
+                    <span class="stitched-rule" aria-hidden="true"></span>
+                    <p><strong>2:00 PM</strong><span>Niagara Falls</span></p>
+                </div>
+
+                <img class="hero__puppet" src="./assets/illustrations/ana-emi-puppet.webp"
+                    alt="Marioneta de fieltro de Ana Emi sosteniendo un birrete" width="1000" height="1500"
+                    fetchpriority="high" decoding="async">
+
+                <a class="scroll-cue" href="#cuenta-regresiva" aria-label="Descubrir la invitación">
+                    <span>Desliza para descubrir</span>
+                    <span aria-hidden="true">↓</span>
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <section class="section countdown" id="cuenta-regresiva" aria-labelledby="countdown-title">
+                <div class="page-shell countdown__inner">
+                    <p class="felt-label" data-reveal>Cuenta regresiva</p>
+                    <h2 id="countdown-title" class="section-title section-title--playful" data-reveal>
+                        <span class="felt-letter--turquoise">¡Ya</span>
+                        <span class="felt-letter--coral">casi!</span>
+                    </h2>
+
+                    <div class="countdown-card" data-countdown data-reveal role="timer"
+                        aria-label="Cuenta regresiva para la graduación de Daniela">
+                        <div class="countdown-unit countdown-unit--days">
+                            <strong data-countdown-days>000</strong>
+                            <span>Días</span>
+                        </div>
+                        <div class="countdown-unit countdown-unit--hours">
+                            <strong data-countdown-hours>00</strong>
+                            <span>Horas</span>
+                        </div>
+                        <div class="countdown-unit countdown-unit--minutes">
+                            <strong data-countdown-minutes>00</strong>
+                            <span>Minutos</span>
+                        </div>
+                        <div class="countdown-unit countdown-unit--seconds">
+                            <strong data-countdown-seconds>00</strong>
+                            <span>Segundos</span>
+                        </div>
+                    </div>
+
+                    <p class="countdown__date" data-reveal>31 <span>Oct</span> 2026</p>
+                    <p class="sr-only" data-countdown-status aria-live="polite"></p>
+                </div>
+            </section>
+
+            <section class="section dress-code" aria-labelledby="dress-title">
+                <div class="page-shell dress-code__inner">
+                    <div class="dress-code__heading" data-reveal>
+                        <p class="felt-label">Dress code</p>
+                        <div class="story-patch story-patch--dress">
+                            <h2 id="dress-title" class="section-title section-title--dress">
+                                <span>Ven muy</span><span>elegante</span>
+                            </h2>
+                            <p class="dark-label">Lista para celebrar con Daniela</p>
+                        </div>
+                    </div>
+
+                    <img class="dress-code__art" src="./assets/illustrations/formal-outfit.webp"
+                        alt="Vestido amarillo, zapatos morados y moños de fieltro" width="1100" height="1190"
+                        loading="lazy" decoding="async" data-reveal>
+
+                    <span class="felt-star felt-star--dress" aria-hidden="true">★</span>
+                </div>
+            </section>
+
+            <section class="section location" aria-labelledby="location-title">
+                <div class="page-shell location__inner">
+                    <div class="location__heading" data-reveal>
+                        <p class="felt-label">Nos vemos en</p>
+                        <div class="story-patch story-patch--location">
+                            <h2 id="location-title" class="section-title section-title--location">
+                                <span>Niagara</span><span>Falls</span>
+                            </h2>
+                            <p class="location__venue">Convention Centre</p>
+                        </div>
+                    </div>
+
+                    <img class="location__art" src="./assets/illustrations/niagara-diorama.webp"
+                        alt="Maqueta de fieltro de las Cataratas del Niágara y el Niagara Falls Convention Centre"
+                        width="1500" height="809" loading="lazy" decoding="async" data-reveal>
+
+                    <a class="felt-button felt-button--coral location__button"
+                        href="https://maps.app.goo.gl/X4abVVeZd3RWrRCF6?g_st=ac" target="_blank"
+                        rel="noopener noreferrer" data-reveal>
+                        <span>Abrir ubicación</span><span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="section rsvp" aria-labelledby="rsvp-title">
+                <div class="page-shell rsvp__inner">
+                    <div class="rsvp__heading" data-reveal>
+                        <p class="felt-label">RSVP</p>
+                        <div class="story-patch story-patch--rsvp">
+                            <h2 id="rsvp-title" class="section-title section-title--rsvp">
+                                <span>¿Vienes con</span><span>nosotros?</span>
+                            </h2>
+                            <p>Dile a mamá o papá para confirmar.</p>
+                        </div>
+                    </div>
+
+                    <a id="rsvp-link" class="felt-button felt-button--dark rsvp__button" href="#" target="_blank"
+                        rel="noopener noreferrer" data-reveal>
+                        <span>Confirmar</span><span aria-hidden="true">♥</span>
+                    </a>
+
+                    <img class="rsvp__art" src="./assets/illustrations/rsvp-envelope.webp"
+                        alt="Sobre de fieltro sonriente con birrete" width="1050" height="1186" loading="lazy"
+                        decoding="async" data-reveal>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="page-shell footer__inner" data-reveal>
+                <p>Developed by</p>
+                <a href="https://caele.mx" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visitar Cáele.mx">
+                    <img src="./assets/branding/caele-kids-fiel.svg" alt="Cáele.mx">
+                </a>
+                <span>Invitaciones digitales para momentos especiales.</span>
+                <small>© <span data-current-year>2026</span> Cáele.mx</small>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
