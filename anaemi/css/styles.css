@@ -110,6 +110,44 @@ img {
     line-height: 0.82;
 }
 
+.story-patch,
+.hero__details {
+    color: var(--ink);
+    background-color: rgb(255 249 238 / 94%);
+    background-image:
+        radial-gradient(circle at 18% 24%, rgb(201 144 35 / 13%) 0 0.065rem, transparent 0.085rem),
+        radial-gradient(circle at 76% 68%, rgb(113 107 99 / 8%) 0 0.055rem, transparent 0.08rem);
+    background-size: 1.1rem 1.1rem, 1.35rem 1.35rem;
+    border: 0.14rem dashed var(--gold);
+    box-shadow:
+        0 0.9rem 2rem rgb(83 55 22 / 14%),
+        inset 0 0 0 0.2rem rgb(255 255 255 / 35%);
+    backdrop-filter: blur(0.2rem);
+}
+
+.story-patch {
+    inline-size: min(100%, 36rem);
+    margin-block-start: 1.2rem;
+    padding: clamp(1rem, 4vw, 1.55rem);
+    border-radius: 1.8rem 1.15rem 2rem 1.35rem;
+    transform: rotate(-0.45deg);
+}
+
+.story-patch--location {
+    border-color: var(--lavender);
+    border-radius: 1.2rem 2rem 1.35rem 1.8rem;
+    transform: rotate(0.35deg);
+}
+
+.story-patch--rsvp {
+    border-color: var(--coral);
+    transform: rotate(-0.3deg);
+}
+
+.story-patch .section-title {
+    margin-block-start: 0.35rem;
+}
+
 .felt-letter,
 .section-title--playful span {
     display: inline-block;
@@ -287,6 +325,9 @@ img {
     gap: 1rem;
     inline-size: fit-content;
     margin-block-start: clamp(4.5rem, 12svh, 7rem);
+    padding: 1rem 1.15rem;
+    border-radius: 1.5rem 1rem 1.7rem 1.2rem;
+    transform: rotate(-0.35deg);
 }
 
 .hero__date {
@@ -615,7 +656,7 @@ img {
     margin-inline-start: 4%;
 }
 
-.rsvp__heading > p:last-child {
+.story-patch--rsvp > p:last-child {
     max-inline-size: 18rem;
     margin: 2.2rem 0 0;
     font-size: 1rem;
@@ -781,6 +822,21 @@ img {
     .location__inner,
     .rsvp__inner {
         padding-inline: 1.5rem;
+    }
+}
+
+@media (max-width: 47.99rem) {
+    .story-patch {
+        padding: 0.9rem 0.8rem 1.15rem;
+    }
+
+    .story-patch .section-title--dress,
+    .story-patch .section-title--location {
+        font-size: clamp(3.6rem, 17vw, 5.2rem);
+    }
+
+    .story-patch .section-title--rsvp {
+        font-size: clamp(2.75rem, 12.5vw, 4.4rem);
     }
 }
 
