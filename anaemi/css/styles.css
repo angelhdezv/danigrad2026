@@ -335,9 +335,10 @@ img {
 .hero__puppet {
     position: absolute;
     z-index: 2;
-    inset-inline-start: clamp(8.5rem, 33vw, 20rem);
+    inset-inline-start: auto;
+    inset-inline-end: clamp(-6rem, -12vw, -3rem);
     inset-block-end: -1rem;
-    inline-size: clamp(24rem, 94vw, 46rem);
+    inline-size: clamp(18rem, 74vw, 27rem);
     max-inline-size: none;
     filter: drop-shadow(0 1.2rem 1.2rem rgb(83 55 22 / 15%));
     pointer-events: none;
@@ -502,9 +503,10 @@ img {
 .dress-code__art {
     position: absolute;
     z-index: 2;
-    inset-inline-start: clamp(1rem, 8vw, 7rem);
-    inset-block-end: -2rem;
-    inline-size: clamp(29rem, 112vw, 60rem);
+    inset-inline-start: auto;
+    inset-inline-end: clamp(-5rem, -10vw, -2.5rem);
+    inset-block-end: -1rem;
+    inline-size: clamp(19rem, 76vw, 29rem);
     max-inline-size: none;
     filter: drop-shadow(0 1.2rem 1.2rem rgb(83 55 22 / 13%));
 }
@@ -561,10 +563,11 @@ img {
 .location__art {
     position: absolute;
     z-index: 2;
-    inset-inline-start: -24%;
+    inset-inline-start: 50%;
     inset-block-end: 10.5rem;
-    inline-size: 148%;
+    inline-size: min(112%, 45rem);
     max-inline-size: none;
+    translate: -50% 0;
     filter: drop-shadow(0 1.2rem 1rem rgb(83 55 22 / 16%));
 }
 
@@ -620,9 +623,10 @@ img {
 .rsvp__art {
     position: absolute;
     z-index: 2;
-    inset-inline-start: clamp(2rem, 13vw, 10rem);
-    inset-block-end: -2rem;
-    inline-size: clamp(28rem, 110vw, 57rem);
+    inset-inline-start: auto;
+    inset-inline-end: clamp(-5rem, -10vw, -2.75rem);
+    inset-block-end: -1rem;
+    inline-size: clamp(19rem, 72vw, 28rem);
     max-inline-size: none;
     filter: drop-shadow(0 1.2rem 1.1rem rgb(83 55 22 / 14%));
 }
@@ -693,8 +697,9 @@ img {
     }
 
     .hero__puppet {
-        inset-inline-start: 42%;
-        inline-size: min(55vw, 43rem);
+        inset-inline-start: auto;
+        inset-inline-end: -1.5rem;
+        inline-size: min(50vw, 32rem);
     }
 
     .hero__details {
@@ -726,8 +731,9 @@ img {
     }
 
     .dress-code__art {
-        inset-inline-start: 43%;
-        inline-size: min(61vw, 53rem);
+        inset-inline-start: auto;
+        inset-inline-end: -1rem;
+        inline-size: min(43vw, 30rem);
     }
 
     .section-title--location {
@@ -735,8 +741,8 @@ img {
     }
 
     .location__art {
-        inset-inline-start: 13%;
-        inline-size: min(91vw, 77rem);
+        inset-inline-start: 50%;
+        inline-size: min(82vw, 56rem);
     }
 
     .section-title--rsvp {
@@ -744,8 +750,9 @@ img {
     }
 
     .rsvp__art {
-        inset-inline-start: 48%;
-        inline-size: min(49vw, 42rem);
+        inset-inline-start: auto;
+        inset-inline-end: -1rem;
+        inline-size: min(40vw, 30rem);
     }
 }
 
