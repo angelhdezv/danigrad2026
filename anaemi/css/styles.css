@@ -335,10 +335,11 @@ img {
 .hero__puppet {
     position: absolute;
     z-index: 2;
+    display: block;
     inset-inline-start: auto;
-    inset-inline-end: clamp(-6rem, -12vw, -3rem);
+    inset-inline-end: clamp(-5rem, -10vw, -2rem);
     inset-block-end: -1rem;
-    inline-size: clamp(18rem, 74vw, 27rem);
+    inline-size: clamp(24rem, 95vw, 44rem);
     max-inline-size: none;
     filter: drop-shadow(0 1.2rem 1.2rem rgb(83 55 22 / 15%));
     pointer-events: none;
@@ -503,10 +504,11 @@ img {
 .dress-code__art {
     position: absolute;
     z-index: 2;
+    display: block;
     inset-inline-start: auto;
-    inset-inline-end: clamp(-5rem, -10vw, -2.5rem);
+    inset-inline-end: clamp(-4rem, -8vw, -2rem);
     inset-block-end: -1rem;
-    inline-size: clamp(19rem, 76vw, 29rem);
+    inline-size: clamp(25rem, 102vw, 48rem);
     max-inline-size: none;
     filter: drop-shadow(0 1.2rem 1.2rem rgb(83 55 22 / 13%));
 }
@@ -563,9 +565,10 @@ img {
 .location__art {
     position: absolute;
     z-index: 2;
+    display: block;
     inset-inline-start: 50%;
     inset-block-end: 10.5rem;
-    inline-size: min(112%, 45rem);
+    inline-size: min(118%, 58rem);
     max-inline-size: none;
     translate: -50% 0;
     filter: drop-shadow(0 1.2rem 1rem rgb(83 55 22 / 16%));
@@ -623,10 +626,11 @@ img {
 .rsvp__art {
     position: absolute;
     z-index: 2;
+    display: block;
     inset-inline-start: auto;
-    inset-inline-end: clamp(-5rem, -10vw, -2.75rem);
+    inset-inline-end: clamp(-4rem, -8vw, -2rem);
     inset-block-end: -1rem;
-    inline-size: clamp(19rem, 72vw, 28rem);
+    inline-size: clamp(25rem, 100vw, 46rem);
     max-inline-size: none;
     filter: drop-shadow(0 1.2rem 1.1rem rgb(83 55 22 / 14%));
 }
@@ -698,8 +702,8 @@ img {
 
     .hero__puppet {
         inset-inline-start: auto;
-        inset-inline-end: -1.5rem;
-        inline-size: min(50vw, 32rem);
+        inset-inline-end: -2rem;
+        inline-size: min(68vw, 50rem);
     }
 
     .hero__details {
@@ -732,8 +736,8 @@ img {
 
     .dress-code__art {
         inset-inline-start: auto;
-        inset-inline-end: -1rem;
-        inline-size: min(43vw, 30rem);
+        inset-inline-end: -2rem;
+        inline-size: min(62vw, 48rem);
     }
 
     .section-title--location {
@@ -742,7 +746,7 @@ img {
 
     .location__art {
         inset-inline-start: 50%;
-        inline-size: min(82vw, 56rem);
+        inline-size: min(90vw, 65rem);
     }
 
     .section-title--rsvp {
@@ -751,8 +755,8 @@ img {
 
     .rsvp__art {
         inset-inline-start: auto;
-        inset-inline-end: -1rem;
-        inline-size: min(40vw, 30rem);
+        inset-inline-end: -2rem;
+        inline-size: min(60vw, 46rem);
     }
 }
 
@@ -770,22 +774,22 @@ img {
    grow back over the copy through a broader responsive rule. */
 @media (max-width: 47.99rem) {
     .hero__puppet {
-        inset-inline-end: -3rem;
-        inline-size: clamp(17rem, 68vw, 24rem);
+        inset-inline-end: -2rem;
+        inline-size: clamp(24rem, 94vw, 32rem);
     }
 
     .dress-code__art {
-        inset-inline-end: -2.5rem;
-        inline-size: clamp(18rem, 68vw, 25rem);
+        inset-inline-end: -2rem;
+        inline-size: clamp(25rem, 100vw, 34rem);
     }
 
     .location__art {
-        inline-size: min(104%, 40rem);
+        inline-size: min(112%, 45rem);
     }
 
     .rsvp__art {
-        inset-inline-end: -2.25rem;
-        inline-size: clamp(18rem, 66vw, 24rem);
+        inset-inline-end: -2rem;
+        inline-size: clamp(25rem, 100vw, 34rem);
     }
 }
 
