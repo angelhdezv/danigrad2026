@@ -337,10 +337,12 @@ img {
     z-index: 2;
     display: block;
     inset-inline-start: auto;
-    inset-inline-end: clamp(-5rem, -10vw, -2rem);
-    inset-block-end: -1rem;
-    inline-size: clamp(24rem, 95vw, 44rem);
+    inset-inline-end: clamp(-2.75rem, -7vw, -1rem);
+    inset-block-end: -0.5rem;
+    inline-size: auto;
+    block-size: clamp(31rem, 64svh, 43rem);
     max-inline-size: none;
+    max-block-size: 72%;
     filter: drop-shadow(0 1.2rem 1.2rem rgb(83 55 22 / 15%));
     pointer-events: none;
     user-select: none;
@@ -506,10 +508,12 @@ img {
     z-index: 2;
     display: block;
     inset-inline-start: auto;
-    inset-inline-end: clamp(-4rem, -8vw, -2rem);
+    inset-inline-end: clamp(-4rem, -8vw, -2.25rem);
     inset-block-end: -1rem;
-    inline-size: clamp(25rem, 102vw, 48rem);
-    max-inline-size: none;
+    inline-size: auto;
+    block-size: clamp(26rem, 55svh, 38rem);
+    max-inline-size: 96%;
+    max-block-size: 58%;
     filter: drop-shadow(0 1.2rem 1.2rem rgb(83 55 22 / 13%));
 }
 
@@ -568,7 +572,7 @@ img {
     display: block;
     inset-inline-start: 50%;
     inset-block-end: 10.5rem;
-    inline-size: min(118%, 58rem);
+    inline-size: min(108%, 50rem);
     max-inline-size: none;
     translate: -50% 0;
     filter: drop-shadow(0 1.2rem 1rem rgb(83 55 22 / 16%));
@@ -628,10 +632,12 @@ img {
     z-index: 2;
     display: block;
     inset-inline-start: auto;
-    inset-inline-end: clamp(-4rem, -8vw, -2rem);
-    inset-block-end: -1rem;
-    inline-size: clamp(25rem, 100vw, 46rem);
-    max-inline-size: none;
+    inset-inline-end: clamp(-4rem, -8vw, -2.25rem);
+    inset-block-end: -1.5rem;
+    inline-size: auto;
+    block-size: clamp(26rem, 54svh, 36rem);
+    max-inline-size: 96%;
+    max-block-size: 58%;
     filter: drop-shadow(0 1.2rem 1.1rem rgb(83 55 22 / 14%));
 }
 
@@ -702,8 +708,10 @@ img {
 
     .hero__puppet {
         inset-inline-start: auto;
-        inset-inline-end: -2rem;
-        inline-size: min(68vw, 50rem);
+        inset-inline-end: 0;
+        inline-size: auto;
+        block-size: min(78svh, 52rem);
+        max-block-size: 82%;
     }
 
     .hero__details {
@@ -736,8 +744,11 @@ img {
 
     .dress-code__art {
         inset-inline-start: auto;
-        inset-inline-end: -2rem;
-        inline-size: min(62vw, 48rem);
+        inset-inline-end: 1%;
+        inline-size: auto;
+        block-size: min(72svh, 44rem);
+        max-inline-size: 56%;
+        max-block-size: 70%;
     }
 
     .section-title--location {
@@ -746,7 +757,7 @@ img {
 
     .location__art {
         inset-inline-start: 50%;
-        inline-size: min(90vw, 65rem);
+        inline-size: min(92vw, 62rem);
     }
 
     .section-title--rsvp {
@@ -755,8 +766,11 @@ img {
 
     .rsvp__art {
         inset-inline-start: auto;
-        inset-inline-end: -2rem;
-        inline-size: min(60vw, 46rem);
+        inset-inline-end: 0;
+        inline-size: auto;
+        block-size: min(68svh, 42rem);
+        max-inline-size: 55%;
+        max-block-size: 68%;
     }
 }
 
@@ -767,29 +781,6 @@ img {
     .location__inner,
     .rsvp__inner {
         padding-inline: 1.5rem;
-    }
-}
-
-/* Explicit mobile artwork caps. Keep these last so decorative assets cannot
-   grow back over the copy through a broader responsive rule. */
-@media (max-width: 47.99rem) {
-    .hero__puppet {
-        inset-inline-end: -2rem;
-        inline-size: clamp(24rem, 94vw, 32rem);
-    }
-
-    .dress-code__art {
-        inset-inline-end: -2rem;
-        inline-size: clamp(25rem, 100vw, 34rem);
-    }
-
-    .location__art {
-        inline-size: min(112%, 45rem);
-    }
-
-    .rsvp__art {
-        inset-inline-end: -2rem;
-        inline-size: clamp(25rem, 100vw, 34rem);
     }
 }
 
