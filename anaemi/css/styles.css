@@ -391,17 +391,32 @@ img {
 
 .scroll-cue {
     position: absolute;
-    z-index: 6;
+    z-index: 7;
     inset-inline-start: 0;
-    inset-block-end: 1.2rem;
+    inset-block-end: 0.8rem;
     display: flex;
     align-items: center;
     gap: 0.65rem;
-    color: var(--muted);
+    max-inline-size: calc(100% - 1rem);
+    padding: 0.65rem 0.9rem;
+    color: var(--ink);
+    background-color: rgb(255 249 238 / 94%);
+    background-image: radial-gradient(circle at 22% 35%, rgb(201 144 35 / 14%) 0 0.055rem, transparent 0.08rem);
+    background-size: 1rem 1rem;
+    border: 0.11rem dashed var(--gold);
+    border-radius: 999rem;
+    box-shadow: 0 0.45rem 1rem rgb(83 55 22 / 15%);
+    backdrop-filter: blur(0.2rem);
     font-size: 0.62rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.15em;
     text-transform: uppercase;
+}
+
+.scroll-cue span:last-child {
+    color: var(--coral);
+    font-size: 0.9rem;
+    line-height: 1;
 }
 
 .sprinkles span {
