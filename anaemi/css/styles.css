@@ -766,6 +766,29 @@ img {
     }
 }
 
+/* Explicit mobile artwork caps. Keep these last so decorative assets cannot
+   grow back over the copy through a broader responsive rule. */
+@media (max-width: 47.99rem) {
+    .hero__puppet {
+        inset-inline-end: -3rem;
+        inline-size: clamp(17rem, 68vw, 24rem);
+    }
+
+    .dress-code__art {
+        inset-inline-end: -2.5rem;
+        inline-size: clamp(18rem, 68vw, 25rem);
+    }
+
+    .location__art {
+        inline-size: min(104%, 40rem);
+    }
+
+    .rsvp__art {
+        inset-inline-end: -2.25rem;
+        inline-size: clamp(18rem, 66vw, 24rem);
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
