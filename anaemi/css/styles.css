@@ -614,7 +614,10 @@ img {
     inset-inline-start: 50%;
     inset-block-end: 10.5rem;
     inline-size: min(108%, 50rem);
+    block-size: auto;
     max-inline-size: none;
+    aspect-ratio: 1500 / 809;
+    object-fit: contain;
     translate: -50% 0;
     filter: drop-shadow(0 1.2rem 1rem rgb(83 55 22 / 16%));
 }
