@@ -520,8 +520,35 @@ img {
     letter-spacing: -0.04em;
 }
 
+.countdown__date time {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    gap: 0 0.18em;
+}
+
 .countdown__date span {
     color: var(--turquoise);
+}
+
+.countdown__date small {
+    grid-column: 1 / -1;
+    margin-block-start: 0.55rem;
+    color: var(--coral);
+    font-family: var(--body);
+    font-size: clamp(0.75rem, 3.2vw, 0.9rem);
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.countdown__timezone {
+    margin: 0.85rem auto 0;
+    color: var(--muted);
+    font-size: clamp(0.68rem, 2.8vw, 0.8rem);
+    font-weight: 650;
+    line-height: 1.45;
+    text-align: center;
 }
 
 /* Dress code */
@@ -682,8 +709,52 @@ img {
     line-height: 1.6;
 }
 
-.rsvp__button {
+.rsvp__actions {
+    position: relative;
+    z-index: 5;
+    display: grid;
+    justify-items: start;
+    inline-size: min(100%, 24rem);
     margin-block-start: 2rem;
+}
+
+.rsvp__button {
+    margin: 0;
+}
+
+.rsvp__stream {
+    inline-size: min(100%, 20rem);
+    margin-block-start: 1.2rem;
+    padding: 1rem 1.1rem;
+    color: var(--ink);
+    background-color: rgb(255 249 238 / 96%);
+    background-image:
+        radial-gradient(circle at 18% 24%, rgb(201 144 35 / 13%) 0 0.065rem, transparent 0.085rem),
+        radial-gradient(circle at 76% 68%, rgb(113 107 99 / 8%) 0 0.055rem, transparent 0.08rem);
+    background-size: 1.1rem 1.1rem, 1.35rem 1.35rem;
+    border: 0.125rem dashed var(--lavender);
+    border-radius: 1.2rem 1.7rem 1.35rem 1rem;
+    box-shadow: 0 0.8rem 1.6rem rgb(83 55 22 / 12%);
+    transform: rotate(0.35deg);
+}
+
+.rsvp__stream p {
+    margin: 0 0 0.75rem;
+    font-size: 0.86rem;
+    font-weight: 650;
+    line-height: 1.5;
+}
+
+.rsvp__stream a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--coral);
+    font-size: 0.78rem;
+    font-weight: 850;
+    letter-spacing: 0.045em;
+    line-height: 1.35;
+    text-transform: uppercase;
 }
 
 .rsvp__art {

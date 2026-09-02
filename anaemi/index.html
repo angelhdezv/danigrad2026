@@ -11,8 +11,8 @@
     <meta name="author" content="Cáele.mx">
     <meta name="robots" content="noindex, nofollow">
     <link rel="icon" type="image/svg+xml" href="./assets/branding/caele-favicon-kids.svg">
-    <link rel="stylesheet" href="./css/styles.css?v=0.0.3-rsvp-ratio">
-    <script type="module" src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/styles.css?v=0.0.3-event-time">
+    <script type="module" src="./js/main.js?v=0.0.3-event-time"></script>
 </head>
 
 <body>
@@ -56,11 +56,14 @@
 
                 <div class="hero__details" data-reveal>
                     <div class="hero__date">
-                        <strong>31</strong>
-                        <span>Oct<br>2026</span>
+                        <strong data-event-local-day>30</strong>
+                        <span><span data-event-local-month-short>Oct</span><br><span data-event-local-year>2026</span></span>
                     </div>
                     <span class="stitched-rule" aria-hidden="true"></span>
-                    <p><strong>2:00 PM</strong><span>Niagara Falls</span></p>
+                    <p>
+                        <strong><time datetime="2026-10-30T14:30:00Z" data-event-local-time>10:30 a. m.</time></strong>
+                        <span data-event-zone-note="short">Hora oficial de Niagara Falls</span>
+                    </p>
                 </div>
 
                 <img class="hero__puppet" src="./assets/illustrations/ana-emi-puppet.webp"
@@ -103,7 +106,15 @@
                         </div>
                     </div>
 
-                    <p class="countdown__date" data-reveal>31 <span>Oct</span> 2026</p>
+                    <p class="countdown__date" data-reveal>
+                        <time datetime="2026-10-30T14:30:00Z">
+                            <strong data-event-local-day>30</strong>
+                            <span data-event-local-month-short>Oct</span>
+                            <strong data-event-local-year>2026</strong>
+                            <small data-event-local-time>10:30 a. m.</small>
+                        </time>
+                    </p>
+                    <p class="countdown__timezone" data-event-zone-note data-reveal>Hora oficial de Niagara Falls</p>
                     <p class="sr-only" data-countdown-status aria-live="polite"></p>
                 </div>
             </section>
@@ -164,10 +175,20 @@
                         </div>
                     </div>
 
-                    <a id="rsvp-link" class="felt-button felt-button--dark rsvp__button" href="#" target="_blank"
-                        rel="noopener noreferrer" data-reveal>
-                        <span>Confirmar</span><span aria-hidden="true">♥</span>
-                    </a>
+                    <div class="rsvp__actions" data-reveal>
+                        <a id="rsvp-link" class="felt-button felt-button--dark rsvp__button" href="#" target="_blank"
+                            rel="noopener noreferrer">
+                            <span>Confirmar</span><span aria-hidden="true">♥</span>
+                        </a>
+
+                        <div class="rsvp__stream">
+                            <p>Si no pueden acompañarnos, podrán ver la ceremonia en vivo por YouTube.</p>
+                            <a href="https://youtube.com/@universityofniagarafallscanada?si=LqnKwSC5j3wvr77v"
+                                target="_blank" rel="noopener noreferrer">
+                                <span aria-hidden="true">▶</span><span>Ver transmisión en vivo</span>
+                            </a>
+                        </div>
+                    </div>
 
                     <img class="rsvp__art" src="./assets/illustrations/rsvp-envelope.webp"
                         alt="Sobre de fieltro sonriente con birrete" width="1050" height="1186" loading="lazy"

@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Graduación Daniela Leon | Class of 2026</title>
     <meta name="description"
-        content="Acompaña a Daniela Leon a celebrar su graduación el 31 de octubre de 2026 en Niagara Falls Convention Centre.">
+        content="Acompaña a Daniela Leon a celebrar su graduación el 30 de octubre de 2026 en Niagara Falls Convention Centre.">
     <meta name="theme-color" content="#f4efe5">
     <meta name="author" content="Cáele.mx">
     <meta name="robots" content="noindex, nofollow">
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-    <link rel="stylesheet" href="./css/styles.css">
-    <script type="module" src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/styles.css?v=0.0.3-event-time">
+    <script type="module" src="./js/main.js?v=0.0.3-event-time"></script>
 </head>
 
 <body>
@@ -49,8 +49,13 @@
                                 <path d="M7 3v4M17 3v4M3 9h18" />
                             </svg>
                             <div>
-                                <p class="event-detail__primary">31 de octubre de 2026</p>
-                                <p class="event-detail__secondary">2:00 PM</p>
+                                <p class="event-detail__primary">
+                                    <time datetime="2026-10-30T14:30:00Z" data-event-local-date>30 de octubre de 2026</time>
+                                </p>
+                                <p class="event-detail__secondary">
+                                    <time datetime="2026-10-30T14:30:00Z" data-event-local-time>10:30 a. m.</time>
+                                </p>
+                                <p class="event-detail__timezone" data-event-zone-note="compact">Hora oficial de Niagara Falls</p>
                             </div>
                         </div>
 
@@ -99,11 +104,12 @@
                     </div>
 
                     <div class="countdown-date-lockup" data-reveal>
-                        <span class="countdown-date-lockup__day">31</span>
+                        <span class="countdown-date-lockup__day" data-event-local-day>30</span>
                         <span class="countdown-date-lockup__rule" aria-hidden="true"></span>
                         <span class="countdown-date-lockup__detail">
-                            <strong>Octubre</strong>
-                            <span>2026 · 2:00 PM</span>
+                            <strong data-event-local-month>Octubre</strong>
+                            <span><span data-event-local-year>2026</span> · <span data-event-local-time>10:30 a. m.</span></span>
+                            <small data-event-zone-note>Hora oficial de Niagara Falls</small>
                         </span>
                     </div>
 
@@ -301,6 +307,16 @@
                             </svg>
                             <span>Confirmar por WhatsApp</span>
                         </a>
+
+                        <div class="rsvp-stream">
+                            <p>Si no pueden acompañarnos, podrán ver la ceremonia en vivo por YouTube.</p>
+                            <a class="rsvp-stream__link"
+                                href="https://youtube.com/@universityofniagarafallscanada?si=LqnKwSC5j3wvr77v"
+                                target="_blank" rel="noopener noreferrer">
+                                <span class="rsvp-stream__play" aria-hidden="true">▶</span>
+                                <span>Ver transmisión en vivo</span>
+                            </a>
+                        </div>
                     </div>
 
                     <img class="rsvp-art" src="./assets/illustrations/rsvp-envelope.webp" alt="" width="1000"

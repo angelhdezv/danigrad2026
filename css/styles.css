@@ -816,6 +816,16 @@ p {
     line-height: 1.45;
 }
 
+.event-detail__timezone {
+    max-inline-size: 14rem;
+    margin-block-start: 0.35rem !important;
+    color: rgb(41 42 41 / 72%);
+    font-size: clamp(0.56rem, 1.7vw, 0.68rem);
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    line-height: 1.45;
+}
+
 .event-detail__link {
     display: inline-block;
 
@@ -1838,6 +1848,17 @@ main {
     text-transform: none;
 }
 
+.countdown-date-lockup__detail small {
+    display: block;
+    max-inline-size: 15rem;
+    color: rgb(41 42 41 / 68%);
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.055em;
+    line-height: 1.45;
+    text-transform: none;
+}
+
 .countdown-clock {
     position: relative;
     z-index: 2;
@@ -2290,7 +2311,7 @@ main {
 /* RSVP */
 
 .editorial-section--rsvp {
-    min-block-size: max(100svh, 55rem);
+    min-block-size: max(100svh, 62rem);
 }
 
 .rsvp-layout {
@@ -2343,6 +2364,47 @@ main {
     margin: 0 0 2.4rem;
     font-size: clamp(0.98rem, 3.9vw, 1.18rem);
     line-height: 1.75;
+}
+
+.rsvp-stream {
+    inline-size: min(100%, 21rem);
+    margin-block-start: 1.7rem;
+    padding-block-start: 1.35rem;
+    border-block-start: 0.0625rem solid rgb(41 42 41 / 34%);
+}
+
+.rsvp-stream p {
+    margin: 0 0 0.9rem;
+    font-size: clamp(0.82rem, 3.2vw, 0.95rem);
+    line-height: 1.55;
+}
+
+.rsvp-stream__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--color-ink);
+    font-family: var(--font-display);
+    font-size: clamp(0.94rem, 3.7vw, 1.08rem);
+    line-height: 1.25;
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold);
+    text-decoration-thickness: 0.1rem;
+    text-underline-offset: 0.28rem;
+}
+
+.rsvp-stream__play {
+    display: grid;
+    place-items: center;
+    inline-size: 1.85rem;
+    aspect-ratio: 1;
+    flex: 0 0 auto;
+    color: white;
+    background: var(--color-ink);
+    border-radius: 50%;
+    font-family: system-ui, sans-serif;
+    font-size: 0.62rem;
+    text-decoration: none;
 }
 
 .rsvp-button {
