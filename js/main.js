@@ -20,9 +20,10 @@
 
 const config = {
     /**
-     * Niagara Falls is on Eastern Daylight Time on the event date.
+     * 30 October 2026, 10:30 a.m. in Niagara Falls.
+     * Niagara Falls is on Eastern Daylight Time (UTC-4) on the event date.
      */
-    eventDate: '2026-10-31T14:00:00-04:00',
+    eventDateUtc: '2026-10-30T14:30:00Z',
 
     /**
      * Mexican WhatsApp number.
@@ -39,7 +40,8 @@ const config = {
         'Hola Daniela,',
         '',
         'Confirmo mi asistencia a tu graduación',
-        'el 31 de octubre de 2026.',
+        'el 30 de octubre de 2026 a las 10:30 a. m.,',
+        'hora de Niagara Falls.',
     ].join('\n'),
 };
 
@@ -99,6 +101,92 @@ const elements = {
 
 
 /* ==========================================================
+   LOCAL EVENT DATE AND TIME
+========================================================== */
+
+const capitalize = (value) =>
+    value.charAt(0).toUpperCase() + value.slice(1);
+
+const getFormattedPart = (date, options, type) => {
+    const formatter = new Intl.DateTimeFormat('es-MX', options);
+    const part = formatter
+        .formatToParts(date)
+        .find((item) => item.type === type);
+
+    return part ? part.value : '';
+};
+
+const updateEventDateTime = () => {
+    const eventDate = new Date(config.eventDateUtc);
+
+    if (Number.isNaN(eventDate.getTime())) {
+        return;
+    }
+
+    const localDate = new Intl.DateTimeFormat('es-MX', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+    }).format(eventDate);
+
+    const localTime = new Intl.DateTimeFormat('es-MX', {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+    }).format(eventDate);
+
+    const localDay = getFormattedPart(
+        eventDate,
+        { day: 'numeric' },
+        'day',
+    );
+
+    const localMonth = capitalize(getFormattedPart(
+        eventDate,
+        { month: 'long' },
+        'month',
+    ));
+
+    const localMonthShort = capitalize(getFormattedPart(
+        eventDate,
+        { month: 'short' },
+        'month',
+    ).replace('.', ''));
+
+    const localYear = getFormattedPart(
+        eventDate,
+        { year: 'numeric' },
+        'year',
+    );
+
+    const values = {
+        '[data-event-local-date]': localDate,
+        '[data-event-local-time]': localTime,
+        '[data-event-local-day]': localDay,
+        '[data-event-local-month]': localMonth,
+        '[data-event-local-month-short]': localMonthShort,
+        '[data-event-local-year]': localYear,
+    };
+
+    Object.entries(values).forEach(([selector, value]) => {
+        document.querySelectorAll(selector).forEach((element) => {
+            element.textContent = value;
+        });
+    });
+
+    document.querySelectorAll('[data-event-zone-note]').forEach((element) => {
+        const noteMode = element.dataset.eventZoneNote;
+
+        element.textContent = noteMode === 'short'
+            ? 'Tu hora local'
+            : noteMode === 'compact'
+                ? 'Tu hora local · Niagara: 10:30 a. m.'
+                : 'Hora en tu dispositivo · Niagara Falls: 10:30 a. m.';
+    });
+};
+
+
+/* ==========================================================
    COUNTDOWN
 ========================================================== */
 
@@ -114,7 +202,7 @@ const updateCountdown = () => {
     }
 
     const eventTime =
-        new Date(config.eventDate).getTime();
+        new Date(config.eventDateUtc).getTime();
 
     const remainingMilliseconds =
         Math.max(eventTime - Date.now(), 0);
@@ -531,6 +619,8 @@ const configureReveals = () => {
 
 const init = () => {
     configureReveals();
+
+    updateEventDateTime();
 
     configureCountdown();
 
